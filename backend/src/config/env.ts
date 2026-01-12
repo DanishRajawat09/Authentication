@@ -14,4 +14,4 @@ if (!parsedEnv.success) {
 }
 
 
-export const { PORT, NODE_ENV , MONGODB_URI , CORS_ORIGIN} = parsedEnv.data;
+export const { PORT, NODE_ENV , MONGODB_URI , CORS_ORIGIN , ACCESS_TOKEN_EXPIRY , ACCESS_TOKEN_SECRET ,REFRESH_TOKEN_EXPIRY,REFRESH_TOKEN_SECRET} = parsedEnv.data;

@@ -1,13 +1,13 @@
 export class ApiError extends Error {
   public readonly statusCode: number;
   public readonly success: false;
-  public readonly errors: unknown[] | undefined;
+  public readonly errors: Record<string, string[]> | undefined;
   public readonly meta: Record<string, unknown> | undefined;
 
   constructor(
     statusCode: number,
     message = "Something went wrong",
-    errors?: unknown[],
+    errors?: Record<string, string[]>,
     meta?: Record<string, unknown>
   ) {
     super(message);
